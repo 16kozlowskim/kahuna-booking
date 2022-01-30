@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "bootzooka.fullname" . }}
+  name: {{ include "kahunabooking.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "bootzooka.name" . }}
-    helm.sh/chart: {{ include "bootzooka.chart" . }}
+    app.kubernetes.io/name: {{ include "kahunabooking.name" . }}
+    helm.sh/chart: {{ include "kahunabooking.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: {{ .Values.bootzooka.service.type }}
+  type: {{ .Values.kahunabooking.service.type }}
   ports:
-    - port: {{ .Values.bootzooka.service.port }}
+    - port: {{ .Values.kahunabooking.service.port }}
       targetPort: http
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "bootzooka.name" . }}
+    app.kubernetes.io/name: {{ include "kahunabooking.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

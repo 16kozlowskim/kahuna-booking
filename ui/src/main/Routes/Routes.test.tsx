@@ -28,7 +28,7 @@ test("renders main route", () => {
     </Router>
   );
 
-  expect(getByText("Welcome to Bootzooka!")).toBeInTheDocument();
+  expect(getByText("Welcome to Kahunabooking!")).toBeInTheDocument();
 });
 
 test("renders protected route for unlogged user", () => {

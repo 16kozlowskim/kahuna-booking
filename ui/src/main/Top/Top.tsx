@@ -18,7 +18,7 @@ const Top: React.FC = () => {
     <Navbar variant="dark" bg="dark" sticky="top" collapseOnSelect expand="lg">
       <Container>
         <LinkContainer exact to="/">
-          <Navbar.Brand>Bootzooka</Navbar.Brand>
+          <Navbar.Brand>Kahunabooking</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

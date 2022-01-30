@@ -11,7 +11,7 @@ const Welcome: React.FC = () => (
       <Row>
         <Container>
           <h3>Hi there!</h3>
-          <h1>Welcome to Bootzooka!</h1>
+          <h1>Welcome to Kahunabooking!</h1>
           <p>
             In this template application you can{" "}
             <Link to="/register" className="btn btn-outline-light">
@@ -33,14 +33,14 @@ const Welcome: React.FC = () => (
         <Image fluid src={logo} alt="SoftwareMill" width="300" />
       </a>
       <p>
-        If you are interested in how Bootzooka works,
+        If you are interested in how Kahunabooking works,
         <br />
         you can browse the{" "}
-        <a href="http://softwaremill.github.io/bootzooka/" target="blank">
+        <a href="http://softwaremill.github.io/kahunabooking/" target="blank">
           Documentation
         </a>{" "}
         or{" "}
-        <a href="https://github.com/softwaremill/bootzooka" target="blank">
+        <a href="https://github.com/softwaremill/kahunabooking" target="blank">
           Source code
         </a>{" "}
         .

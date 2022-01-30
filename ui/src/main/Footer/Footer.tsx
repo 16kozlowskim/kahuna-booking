@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
           <Row>
             <Col sm={6} className="py-3">
               <small>
-                Bootzooka - application scaffolding by <a href="http://softwaremill.com">SoftwareMill</a>,
-                <br /> sources available on <a href="https://github.com/softwaremill/bootzooka/">GitHub</a>
+                Kahunabooking - application scaffolding by <a href="http://softwaremill.com">SoftwareMill</a>,
+                <br /> sources available on <a href="https://github.com/softwaremill/kahunabooking/">GitHub</a>
               </small>
             </Col>
             <Col sm={6} className="text-right py-3">

@@ -15,7 +15,7 @@ const NotFound: React.FC = () => (
         <a href="http://softwaremill.com">SoftwareMill - our company Home Page</a>
       </li>
       <li>
-        <a href="https://github.com/softwaremill/bootzooka/">Bootzooka on GitHub</a>
+        <a href="https://github.com/softwaremill/kahunabooking/">Kahunabooking on GitHub</a>
       </li>
     </ul>
   </Container>

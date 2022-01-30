@@ -12,6 +12,6 @@ test("renders text content", () => {
       <Welcome />
     </Router>
   );
-  const header = getByText("Welcome to Bootzooka!");
+  const header = getByText("Welcome to Kahunabooking!");
   expect(header).toBeInTheDocument();
 });

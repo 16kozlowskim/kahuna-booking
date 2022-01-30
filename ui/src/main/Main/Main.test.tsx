@@ -34,7 +34,7 @@ test("shows app on logged in status", () => {
     </Router>
   );
 
-  expect(getByText("Welcome to Bootzooka!")).toBeInTheDocument();
+  expect(getByText("Welcome to Kahunabooking!")).toBeInTheDocument();
 });
 
 test("shows app on logged out status", () => {
@@ -46,5 +46,5 @@ test("shows app on logged out status", () => {
     </Router>
   );
 
-  expect(getByText("Welcome to Bootzooka!")).toBeInTheDocument();
+  expect(getByText("Welcome to Kahunabooking!")).toBeInTheDocument();
 });

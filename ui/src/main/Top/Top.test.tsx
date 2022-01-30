@@ -28,7 +28,7 @@ test("renders brand name", () => {
     </Router>
   );
 
-  expect(getByText("Bootzooka")).toBeInTheDocument();
+  expect(getByText("Kahunabooking")).toBeInTheDocument();
 });
 
 test("renders nav bar unlogged user", () => {

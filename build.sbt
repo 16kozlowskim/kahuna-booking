@@ -95,7 +95,7 @@ lazy val yarnTask = inputKey[Unit]("Run yarn with arguments")
 lazy val copyWebapp = taskKey[Unit]("Copy webapp")
 
 lazy val commonSettings = commonSmlBuildSettings ++ Seq(
-  organization := "com.softwaremill.bootzooka",
+  organization := "com.mkozlowski.kahunabooking",
   scalaVersion := "2.13.8",
   libraryDependencies ++= commonDependencies,
   uiDirectory := baseDirectory.value.getParentFile / uiProjectName,
@@ -132,12 +132,12 @@ lazy val buildInfoSettings = Seq(
   ),
   buildInfoOptions += BuildInfoOption.ToJson,
   buildInfoOptions += BuildInfoOption.ToMap,
-  buildInfoPackage := "com.softwaremill.bootzooka.version",
+  buildInfoPackage := "com.mkozlowski.kahunabooking.version",
   buildInfoObject := "BuildInfo"
 )
 
 lazy val fatJarSettings = Seq(
-  assembly / assemblyJarName := "bootzooka.jar",
+  assembly / assemblyJarName := "kahunabooking.jar",
   assembly := assembly.dependsOn(copyWebapp).value,
   assembly / assemblyMergeStrategy := {
     case PathList(ps @ _*) if ps.last endsWith "io.netty.versions.properties"       => MergeStrategy.first
@@ -152,7 +152,7 @@ lazy val fatJarSettings = Seq(
 lazy val dockerSettings = Seq(
   dockerExposedPorts := Seq(8080),
   dockerBaseImage := "adoptopenjdk:11.0.5_10-jdk-hotspot",
-  Docker / packageName := "bootzooka",
+  Docker / packageName := "kahunabooking",
   dockerUsername := Some("softwaremill"),
   dockerUpdateLatest := true,
   Docker / publishLocal := (Docker / publishLocal).dependsOn(copyWebapp).value,
@@ -182,7 +182,7 @@ def now(): String = {
 lazy val rootProject = (project in file("."))
   .settings(commonSettings)
   .settings(
-    name := "bootzooka",
+    name := "kahunabooking",
     Compile / herokuFatJar := Some((backend / assembly / assemblyOutputPath).value),
     Compile / deployHeroku := ((Compile / deployHeroku) dependsOn (backend / assembly)).value
   )
@@ -191,7 +191,7 @@ lazy val rootProject = (project in file("."))
 lazy val backend: Project = (project in file("backend"))
   .settings(
     libraryDependencies ++= dbDependencies ++ httpDependencies ++ jsonDependencies ++ apiDocsDependencies ++ monitoringDependencies ++ dbTestingStack ++ securityDependencies ++ emailDependencies,
-    Compile / mainClass := Some("com.softwaremill.bootzooka.Main")
+    Compile / mainClass := Some("com.mkozlowski.kahunabooking.Main")
   )
   .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings)

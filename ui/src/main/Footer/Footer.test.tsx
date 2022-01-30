@@ -14,7 +14,7 @@ test("renders version data", async () => {
 
   const { getByText, findByText, findAllByRole } = render(<Footer />);
 
-  const info = getByText(/Bootzooka - application scaffolding by /);
+  const info = getByText(/Kahunabooking - application scaffolding by /);
 
   await findAllByRole("loader");
 
@@ -33,7 +33,7 @@ test("catches error of version data", async () => {
 
   const { getByText, findAllByRole } = render(<Footer />);
 
-  const info = getByText(/Bootzooka - application scaffolding by /);
+  const info = getByText(/Kahunabooking - application scaffolding by /);
 
   await findAllByRole("loader");
 
@@ -46,7 +46,7 @@ test("catches undefined error of version data", async () => {
 
   const { getByText, findAllByRole } = render(<Footer />);
 
-  const info = getByText(/Bootzooka - application scaffolding by /);
+  const info = getByText(/Kahunabooking - application scaffolding by /);
 
   await findAllByRole("loader");
 
