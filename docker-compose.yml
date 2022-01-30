@@ -15,9 +15,8 @@ services:
       API_HOST: '0.0.0.0'
   kahunabooking-db:
     image: 'postgres'
-    ports:
-      - '25432:5432'
+    network_mode: host
     environment:
-      POSTGRES_USER: 'postgres'
-      POSTGRES_PASSWORD: 'b00t200k4'
+      POSTGRES_USER: 'admin'
+      POSTGRES_PASSWORD: 'admin'
       POSTGRES_DB: 'kahunabooking'
